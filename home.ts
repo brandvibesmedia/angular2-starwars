@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Response } from '@angular/http';
+import { Observable } from 'rxjs';
 
 import { SWCharacter } from './apiTypes';
 import { characterService } from './character.service';
@@ -10,12 +10,8 @@ import { characterService } from './character.service';
 })
 
 export class HomeComponent {
-    chars: SWCharacter[];
-
+    chars: Observable<SWCharacter[]>;
     constructor(chs: characterService) {
-        const chsObjs = chs.load();
-        chsObjs.subscribe((res: Response) => {
-            this.chars = res.json();
-        });
+        this.chars = chs.load$();
     }
 }

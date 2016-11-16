@@ -1,0 +1,20 @@
+<form [formGroup]="charFormGroup">
+    <div class="card">
+        <div class="card-content">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="charName" formControlName="charName" type="text" placeholder="Name your character">
+                    <p class="red-text text-darken-1" *ngIf="charFormGroup.controls.charName.touched && !charFormGroup.controls.charName.valid">Please enter your character's name</p>
+                </div>
+                <div class="input-field col s6">
+                    <select id="charArch" formControlName="charArch">
+                        <option value="">Select your archetype</option>
+                        <option value="Human">Human</option>
+                        <option value="Droid">Droid</option>
+                    </select>
+                    <p class="red-text text-darken-1" *ngIf="charFormGroup.controls.charArch.touched && !charFormGroup.controls.charArch.valid">Please select your character's archetype</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

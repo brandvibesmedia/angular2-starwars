@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome';
 import { HomeComponent } from './home';
 import { CharacterComponent } from './character';
 import { ArchType } from './arch-type/arch-type';
+import { ArchForm } from './arch-form/arch-form';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
         WelcomeComponent,
         HomeComponent,
         CharacterComponent,
-        ArchType
+        ArchType,
+        ArchForm
     ],
     imports: [
         BrowserModule,

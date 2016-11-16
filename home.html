@@ -7,7 +7,7 @@
 
 <div class="card">
     <div class="card-content">
-        <ul class="collection-item" *ngFor="let char of chars">
+        <ul class="collection" *ngFor="let char of chars | async">
             <li class="collection-item">{{char.name}}</li>
         </ul>
     </div>
