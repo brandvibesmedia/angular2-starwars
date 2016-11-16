@@ -1,6 +1,6 @@
 import { OnInit, Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Response } from '@angular/http';
+import { Observable } from 'rxjs';
 
 import { Title } from '@angular/platform-browser';
 import { SWCharacter } from './apiTypes';
@@ -12,7 +12,7 @@ import { characterService } from './character.service';
 })
 
 export class CharacterComponent implements OnInit {
-    chars: SWCharacter[];
+    chars: Observable<SWCharacter[]>;
     archType: SWCharacter;
     t: Title;
     charFormGroup: FormGroup;
@@ -21,10 +21,7 @@ export class CharacterComponent implements OnInit {
                 chs: characterService,
                 private t: Title) {
 
-        const chsObjs = chs.load();
-        chsObjs.subscribe((res: Response) => {
-            this.chars = res.json();
-        });
+        this.chars = chs.load();
     }
 
     ngOnInit() {

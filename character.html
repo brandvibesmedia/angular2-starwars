@@ -32,7 +32,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col s4" *ngFor="let char of chars">
+    <div class="col s4" *ngFor="let char of chars | async">
         <arch-type [archtype]="char" [showselect]="charFormGroup.valid" (selectArchType)="setArchType($event)"></arch-type>
     </div>
 </div>
