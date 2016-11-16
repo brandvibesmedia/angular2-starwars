@@ -21,7 +21,7 @@ export class CharacterComponent implements OnInit {
                 chs: characterService,
                 private t: Title) {
 
-        this.chars = chs.load();
+        this.chars = chs.load$();
     }
 
     ngOnInit() {

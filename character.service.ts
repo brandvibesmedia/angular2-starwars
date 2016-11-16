@@ -12,7 +12,7 @@ export class characterService {
     constructor(private http: Http) {
     }
 
-    load(): Observable<SWCharacter[]> {
+    load$(): Observable<SWCharacter[]> {
         return this.http.get(API_URL + '/archetypes').map((res: Response) => res.json());
     }
 }
