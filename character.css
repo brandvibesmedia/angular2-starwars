@@ -1,0 +1,13 @@
+.c_female {
+    background-color: #FFECF7;
+    border: 1px solid #FFECF7;
+}
+
+.c_male {
+    background-color: #ebfffc;
+    border: 1px solid #ebfffc;
+}
+
+.c_other {
+    background-color: #f7f7f7;
+}

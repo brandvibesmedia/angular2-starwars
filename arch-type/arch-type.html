@@ -1,0 +1,24 @@
+<div class="card" [ngClass]="sexClass(char.sex)">
+    <div class="card-content">
+        <div class="card-title">{{char.name}}</div>
+        <div class="card-action center-align">
+            <button class="btn btn-sm indigo"
+                    (click)="setArchType()"
+                    [disabled]="!selectbutton"
+                    [class.disabled]="!selectbutton">Choose
+            </button>
+        </div>
+        <ul class="collection">
+            <li class="collection-item"><strong>Birthday:</strong> {{char.birthday | uppercase}}</li>
+            <li class="collection-item"><strong>Weight:</strong> {{char.weight | lowercase}}</li>
+            <li class="collection-item"><strong>Height:</strong> {{char.height}}</li>
+            <li class="collection-item"><strong>Strength:</strong> {{char.strength}}</li>
+            <li class="collection-item"><strong>Dexterity:</strong> {{char.dexterity}}</li>
+            <li class="collection-item"><strong>Hair:</strong> {{char.hair}}</li>
+            <li class="collection-item"><strong>Race:</strong> {{char.race}}</li>
+            <li class="collection-item"><strong>Sex:</strong> {{char.sex}}</li>
+            <li class="collection-item"><strong>Stats:</strong> {{char.statPref}}</li>
+        </ul>
+
+    </div>
+</div>

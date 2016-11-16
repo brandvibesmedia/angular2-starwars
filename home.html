@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-content">
+        <div class="card-title">Welcome to Star Wars</div>
+        <p>Here you can select the following character:</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+        <ul class="collection-item" *ngFor="let char of chars">
+            <li class="collection-item">{{char.name}}</li>
+        </ul>
+    </div>
+</div>
